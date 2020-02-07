@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         $validatedData = $request->validate([
             'title' => 'required',
             'post' => 'required',

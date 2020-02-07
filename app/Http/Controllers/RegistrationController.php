@@ -7,11 +7,13 @@ use App\User;
 
 class RegistrationController extends Controller
 {
-    public function create() {
+    public function create()
+    {
         return view('layouts.user.create');
     }
 
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         $validatedData = $request->validate([
             'username' => 'required',
             'password' => 'required|confirmed',

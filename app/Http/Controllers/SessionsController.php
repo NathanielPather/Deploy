@@ -6,12 +6,14 @@ use Illuminate\Http\Request;
 
 class SessionsController extends Controller
 {
-    public function create() {
+    public function create()
+    {
         return view('layouts.sessions.create');
     }
 
-    public function store() {
-        if(auth()->attempt(request(['username', 'password'])) == false) {
+    public function store()
+    {
+        if (auth()->attempt(request(['username', 'password'])) == false) {
             return back()->withErrors([
                 'message' => 'The username or password is incorrect, please try again'
             ]);
@@ -20,7 +22,8 @@ class SessionsController extends Controller
         return redirect()->to('/');
     }
 
-    public function destroy() {
+    public function destroy()
+    {
         auth()->logout();
 
         return redirect()->to('/');
