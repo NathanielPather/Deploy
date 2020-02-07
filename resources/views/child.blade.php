@@ -35,8 +35,9 @@
 @section('posts')
     @foreach ($posts as $post)
         <pre>
-            <div id="user">{{$post->user->username}}</div><div
-                id="timestamp">{{date('F d, Y', strtotime($post->created_at))}}</div>
+            <div id="user">{{$post->user->username}}</div><div id="post-container"><div
+                    id="title">{{$post->title}}</div><div
+                    id="timestamp">{{date('F d, Y', strtotime($post->created_at))}}</div></div>
             <div id="post">{{$post->post}}</div>
         </pre>
     @endforeach

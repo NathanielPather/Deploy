@@ -83,9 +83,11 @@ div > pre > #user {
     font-size: 14px;
 }
 
-div > pre > #timestamp {
+div > pre > #post-container {
     margin: 0 40px;
     font-size: 12px;
+    display: flex;
+    justify-content: space-between;
 }
 
 div > pre > #post {
