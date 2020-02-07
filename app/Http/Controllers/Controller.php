@@ -16,7 +16,7 @@ class Controller extends BaseController
 
     public function show()
     {
-        $posts = Posts::with('user')->get();
+        $posts = Posts::with('user')->latest()->get();
         return view('child', ['posts' => $posts]);
     }
 }
